@@ -1,0 +1,709 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <!--CSS-->
+    <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"
+          rel="stylesheet"> 
+    <link href="~/Content/bootstrap-datepicker/css/bootstrap-datepicker.css" rel="stylesheet" />
+    <link href="~/Content/Custom/Custom.css" rel="stylesheet" />
+    <!---->
+    <title>Index</title>
+</head>
+<body>
+    <div class="container">
+        <div>
+            <!--Header-->
+            <ul id="tabs" class="nav nav-tabs" data-tabs="tabs">
+                <li class="active">
+                    <a href="#tab1"
+                       data-toggle="tab">Dotnet</a>
+                </li>
+                <li><a href="#tab2" data-toggle="tab">Java</a></li>
+                <li><a href="#tab3" data-toggle="tab">Database</a></li>
+            </ul>
+            <!--Tabs area-->
+            <div id="my-tab-content" class="tab-content">
+                <!--Tab 1-->
+                <div class="tab-pane active" id="tab1">
+                    <div class="row header" style="margin-top: 20px">
+                        <div class="col-md-12">
+                            <div class="col-md-12 table-responsive">
+                                <!--Personal Information table-->
+                                <table class="table table-bordered table-hover">
+                                    <!--Header-->
+                                    <thead>
+                                        <tr>
+                                            <th colspan="2" style="text-align: center; background-color:cornflowerblue">PERSONAL INFORMATION</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                Name
+                                            </td>
+                                            <td>
+                                                <input type="text" placeholder="Name of Candidate" class="form-control" />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                Date of birth
+                                            </td>
+                                            <td>
+                                                <div class="input-group date" data-provide="datepicker">
+                                                    <input type="text" class="form-control">
+                                                    <div class="input-group-addon">
+                                                        <span class="glyphicon glyphicon-th"></span>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                Email
+                                            </td>
+                                            <td>
+                                                <input type="text" placeholder="Email" class="form-control" />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                Phone
+                                            </td>
+                                            <td>
+                                                <input type="text" placeholder="Phone" class="form-control" />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                Skype
+                                            </td>
+                                            <td>
+                                                <input type="text" placeholder="Skype" class="form-control" />
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <!--education table-->
+                                <table id="table_education" class="table table-bordered table-hover">
+                                    <!--Header-->
+                                    <thead>
+                                        <tr>
+                                            <th colspan="2" style="text-align: center; background-color:cornflowerblue">EDUCATION</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <!--two rows as default-->
+                                        <tr>
+                                            <td>
+                                                <input id="ed_checkFieldName_1" type="text" value="University" readonly class="form-control" />
+                                            </td>
+                                            <td>
+                                                <textarea id="ed_checkFieldValue_1" placeholder="Description" class="form-control"></textarea>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <input id="ed_checkFieldName_2" type="text" value="GPA" readonly class="form-control" />
+                                            </td>
+                                            <td>
+                                                <textarea id="ed_checkvalue_2" placeholder="Description" class="form-control"></textarea>
+                                            </td>
+                                        </tr>
+                                        <!--Add row execution-->
+                                        <tr>
+                                            <td colspan="2">
+                                                <a class=" BtnPlus btn btn-default pull-left">Add Row</a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Tab 2-->
+                <div class="tab-pane" id="tab2">
+                    <div class="row header" style="margin-top: 20px">
+                        <div class="col-md-12">
+                            <div class="col-md-12 table-responsive">
+                                <!--TECHNOLOGY table-->
+                                <table class="table table-bordered table-hover table-sortable tab_logic">
+                                    <!--header-->
+                                    <thead>
+                                        <tr>
+                                            <th style="text-align: center; background-color:cornflowerblue">TECHNOLOGY</th>
+                                            <th style="text-align: center; background-color:cornflowerblue">EXPERIENCE</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <!--HTML/CSS Skills-->
+                                        <tr>
+                                            <td>
+                                                HTML/CSS
+                                            </td>
+                                            <td>
+                                                <input type="text" placeholder="Working Hours" class="form-control" />
+                                            </td>
+                                        </tr>
+                                        <!--Javascript skills-->
+                                        <tr>
+                                            <td colspan="2">
+                                                <div>
+                                                    <!--check if checkbox is checked-->
+                                                    <input type="checkbox" class="CheckboxToggle" value="0" />
+                                                    <label for="javaScriptCheckbox">Javascript</label>
+                                                    <div id="javaScriptToggle" style="display:none">
+                                                        <div class="col-md-12 table-responsive">
+                                                            <!--Javascript technologies sub-Table-->
+                                                            <table id="table_javascript" class="table table-bordered table-hover">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th colspan="3" style="text-align: center; background-color:cornflowerblue">Javascript technologies</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <input type="checkbox" id="jaS_checkBox_1" />
+                                                                            <label for="jaS_checkBox_1">jQuery</label>
+                                                                        </td>
+                                                                        <td>
+                                                                            <input type="text" id="jaS_checkFieldValue_1" placeholder="Working Hours" class="form-control" />
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <input type="checkbox" id="jaS_checkBox_2" />
+                                                                            <label for="jaS_checkBox_2">Bootstrap</label>
+                                                                        </td>
+                                                                        <td>
+                                                                            <input type="text" id="jaS_checkFieldValue_2" placeholder="Working Hours" class="form-control" />
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <input type="checkbox" id="jaS_checkBox_3" />
+                                                                            <label for="jaS_checkBox_3">Angular</label>
+                                                                        </td>
+                                                                        <td>
+                                                                            <input type="text" id="jaS_checkFieldValue_3" placeholder="Working Hours" class="form-control" />
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <input type="checkbox" id="jaS_checkBox_4" />
+                                                                            <label for="jaS_checkBox_4">Ember</label>
+                                                                        </td>
+                                                                        <td>
+                                                                            <input type="text" id="jaS_checkFieldValue_4" placeholder="Working Hours" class="form-control" />
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <input type="checkbox" id="jaS_checkBox_5" />
+                                                                            <label for="jaS_checkBox_5">Meteor</label>
+                                                                        </td>
+                                                                        <td>
+                                                                            <input type="text" id="jaS_checkFieldValue_5" placeholder="Working Hours" class="form-control" />
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <input type="checkbox" id="jaS_checkBox_6" />
+                                                                            <label for="jaS_checkBox_6">Backbone</label>
+                                                                        </td>
+                                                                        <td>
+                                                                            <input type="text" id="jaS_checkFieldValue_6" placeholder="Working Hours" class="form-control" />
+                                                                        </td>
+                                                                    </tr>
+                                                                    <!--Add row execution-->
+                                                                    <tr>
+                                                                        <td colspan="2">
+                                                                            <a id="jaS_BtnPlus" class=" BtnPlus btn btn-default pull-left">Add Row</a>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <!--.NET technologies skills-->
+                                        <tr>
+                                            <td colspan="2">
+                                                <div>
+                                                    <!--check if checkbox is checked-->
+                                                    <input type="checkbox" class="CheckboxToggle" value="0" />
+                                                    <label>.NET</label>
+                                                    <div id="NETScriptToggle" style="display:none">
+                                                        <div class="col-md-12 table-responsive">
+                                                            <!--.NET technologies sub-Table-->
+                                                            <table id="table_NETTech" class="table table-bordered table-hover">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th colspan="3" style="text-align: center; background-color:cornflowerblue">.NET technologies</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <input type="checkbox" id="NET_checkBox_1" />
+                                                                            <label for="NET_checkBox_1">WebForms</label>
+                                                                        </td>
+                                                                        <td>
+                                                                            <input type="text" id="NET_checkFieldValue_1" placeholder="Working Hours" class="form-control" />
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <input type="checkbox" id="NET_checkBox_2" />
+                                                                            <label for="NET_checkBox_2">MVC</label>
+                                                                        </td>
+                                                                        <td>
+                                                                            <input type="text" id="NET_checkFieldValue_2" placeholder="Working Hours" class="form-control" />
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <input type="checkbox" id="NET_checkBox_3" />
+                                                                            <label for="NET_checkBox_3">Razor</label>
+                                                                        </td>
+                                                                        <td>
+                                                                            <input type="text" id="NET_checkFieldValue_3" placeholder="Working Hours" class="form-control" />
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <input type="checkbox" id="NET_checkBox_4" />
+                                                                            <label for="NET_checkBox_4">WebPages</label>
+                                                                        </td>
+                                                                        <td>
+                                                                            <input type="text" id="NET_checkFieldValue_4" placeholder="Working Hours" class="form-control" />
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <input type="checkbox" id="NET_checkBox_5" />
+                                                                            <label for="NET_checkBox_5">Orchard</label>
+                                                                        </td>
+                                                                        <td>
+                                                                            <input type="text" id="NET_checkFieldValue_5" placeholder="Working Hours" class="form-control" />
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <input type="checkbox" id="NET_checkBox_6" />
+                                                                            <label for="NET_checkBox_6">Umbraco</label>
+                                                                        </td>
+                                                                        <td>
+                                                                            <input type="text" id="NET_checkFieldValue_6" placeholder="Working Hours" class="form-control" />
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <input type="checkbox" id="NET_checkBox_7" />
+                                                                            <label for="NET_checkBox_7">DotNetNuke</label>
+                                                                        </td>
+                                                                        <td>
+                                                                            <input type="text" id="NET_checkFieldValue_7" placeholder="Working Hours" class="form-control" />
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <input type="checkbox" id="NET_checkBox_8" />
+                                                                            <label for="NET_checkBox_8">SharePoint</label>
+                                                                        </td>
+                                                                        <td>
+                                                                            <input type="text" id="NET_checkFieldValue_8" placeholder="Working Hours" class="form-control" />
+                                                                        </td>
+                                                                    </tr>
+                                                                    <!--Add row execution-->
+                                                                    <tr>
+                                                                        <td colspan="2">
+                                                                            <a id="NET_BtnPlus" class=" BtnPlus btn btn-default pull-left">Add Row</a>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <!--Python skills-->
+                                        <tr>
+                                            <td colspan="2">
+                                                <div>
+                                                    <!--check if checkbox is checked-->
+                                                    <input type="checkbox" class="CheckboxToggle" value="0" />
+                                                    <label>Python</label>
+                                                    <div id="PythonToggle" style="display:none">
+                                                        <div class="col-md-12 table-responsive">
+                                                            <!--Python technologies sub-Table-->
+                                                            <table id="table_Python" class="table table-bordered table-hover">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th colspan="3" style="text-align: center; background-color:cornflowerblue">Python frameworks</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <input type="checkbox" id="Python_checkBox_1" />
+                                                                            <label for="Python_checkBox_1">Django</label>
+                                                                        </td>
+                                                                        <td>
+                                                                            <input type="text" id="Python_checkFieldValue_1" placeholder="Working Hours" class="form-control" />
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <input type="checkbox" id="Python_checkBox_2" />
+                                                                            <label for="Python_checkBox_2">Pyramid</label>
+                                                                        </td>
+                                                                        <td>
+                                                                            <input type="text" id="Python_checkFieldValue_2" placeholder="Working Hours" class="form-control" />
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <input type="checkbox" id="Python_checkBox_3" />
+                                                                            <label for="Python_checkBox_3">CherryPy</label>
+                                                                        </td>
+                                                                        <td>
+                                                                            <input type="text" id="Python_checkFieldValue_3" placeholder="Working Hours" class="form-control" />
+                                                                        </td>
+                                                                    </tr>
+                                                                    <!--Add row execution-->
+                                                                    <tr>
+                                                                        <td colspan="2">
+                                                                            <a id="Python_BtnPlus" class=" BtnPlus btn btn-default pull-left">Add Row</a>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <!--Ruby skills-->
+                                        <tr>
+                                            <td colspan="2">
+                                                <div>
+                                                    <!--check if checkbox is checked-->
+                                                    <input type="checkbox" class="CheckboxToggle" value="0" />
+                                                    <label>Ruby</label>
+                                                    <div id="RubyToggle" style="display:none">
+                                                        <div class="col-md-12 table-responsive">
+                                                            <!--Ruby technologies sub-Table-->
+                                                            <table id="table_Ruby" class="table table-bordered table-hover">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th colspan="3" style="text-align: center; background-color:cornflowerblue">Ruby frameworks</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <input type="checkbox" id="Ruby_checkBox_1" />
+                                                                            <label for="Ruby_checkBox_1">Ruby on Rails</label>
+                                                                        </td>
+                                                                        <td>
+                                                                            <input type="text" id="Ruby_checkFieldValue_1" placeholder="Working Hours" class="form-control" />
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <input type="checkbox" id="Ruby_checkBox_2" />
+                                                                            <label for="Ruby_checkBox_2">Rack</label>
+                                                                        </td>
+                                                                        <td>
+                                                                            <input type="text" id="Ruby_checkFieldValue_2" placeholder="Working Hours" class="form-control" />
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <input type="checkbox" id="Ruby_checkBox_3" />
+                                                                            <label for="Ruby_checkBox_3">Sinatra</label>
+                                                                        </td>
+                                                                        <td>
+                                                                            <input type="text" id="Ruby_checkFieldValue_3" placeholder="Working Hours" class="form-control" />
+                                                                        </td>
+                                                                    </tr>
+                                                                    <!--Add row execution-->
+                                                                    <tr>
+                                                                        <td colspan="2">
+                                                                            <a id="Ruby_BtnPlus" class=" BtnPlus btn btn-default pull-left">Add Row</a>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <!--Java skills-->
+                                        <tr>
+                                            <td colspan="2">
+                                                <div>
+                                                    <!--check if checkbox is checked-->
+                                                    <input type="checkbox" class="CheckboxToggle" value="0" />
+                                                    <label>Java</label>
+                                                    <div id="JavaFrameToggle" style="display:none">
+                                                        <div class="col-md-12 table-responsive">
+                                                            <!--Java frameworks sub-Table-->
+                                                            <table id="table_JavaFrame" class="table table-bordered table-hover">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th colspan="3" style="text-align: center; background-color:cornflowerblue">Java frameworks</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <input type="checkbox" id="JavaFrame_checkBox_1" />
+                                                                            <label for="JavaFrame_checkBox_1">JSP</label>
+                                                                        </td>
+                                                                        <td>
+                                                                            <input type="text" id="JavaFrame_checkFieldValue_1" placeholder="Working Hours" class="form-control" />
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <input type="checkbox" id="JavaFrame_checkBox_2" />
+                                                                            <label for="JavaFrame_checkBox_2">JSF</label>
+                                                                        </td>
+                                                                        <td>
+                                                                            <input type="text" id="JavaFrame_checkFieldValue_2" placeholder="Working Hours" class="form-control" />
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <input type="checkbox" id="JavaFrame_checkBox_3" />
+                                                                            <label for="JavaFrame_checkBox_3">Spring</label>
+                                                                        </td>
+                                                                        <td>
+                                                                            <input type="text" id="JavaFrame_checkFieldValue_3" placeholder="Working Hours" class="form-control" />
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <input type="checkbox" id="JavaFrame_checkBox_4" />
+                                                                            <label for="JavaFrame_checkBox_4">Vadiin</label>
+                                                                        </td>
+                                                                        <td>
+                                                                            <input type="text" id="JavaFrame_checkFieldValue_4" placeholder="Working Hours" class="form-control" />
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <input type="checkbox" id="JavaFrame_checkBox_5" />
+                                                                            <label for="JavaFrame_checkBox_5">Struts</label>
+                                                                        </td>
+                                                                        <td>
+                                                                            <input type="text" id="JavaFrame_checkFieldValue_5" placeholder="Working Hours" class="form-control" />
+                                                                        </td>
+                                                                    </tr>
+                                                                    <!--Add row execution-->
+                                                                    <tr>
+                                                                        <td colspan="2">
+                                                                            <a id="JavaFrame_BtnPlus" class=" BtnPlus btn btn-default pull-left">Add Row</a>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <!--Java app servers skills-->
+                                        <tr>
+                                            <td colspan="2">
+                                                <div>
+                                                    <!--check if checkbox is checked-->
+                                                    <input type="checkbox" class="CheckboxToggle" value="0" />
+                                                    <label>Java</label>
+                                                    <div id="JavaServersToggle" style="display:none">
+                                                        <div class="col-md-12 table-responsive">
+                                                            <!--Java app servers sub-Table-->
+                                                            <table id="table_JavaServers" class="table table-bordered table-hover">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th colspan="3" style="text-align: center; background-color:cornflowerblue">Java frameworks</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <input type="checkbox" id="JavaServers_checkBox_1" />
+                                                                            <label for="JavaServers_checkBox_1">Tomcat</label>
+                                                                        </td>
+                                                                        <td>
+                                                                            <input type="text" id="JavaServers_checkFieldValue_1" placeholder="Working Hours" class="form-control" />
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <input type="checkbox" id="JavaServers_checkBox_2" />
+                                                                            <label for="JavaServers_checkBox_2">JBoss</label>
+                                                                        </td>
+                                                                        <td>
+                                                                            <input type="text" id="JavaServers_checkFieldValue_2" placeholder="Working Hours" class="form-control" />
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <input type="checkbox" id="JavaServers_checkBox_3" />
+                                                                            <label for="JavaServers_checkBox_3">WebSphere</label>
+                                                                        </td>
+                                                                        <td>
+                                                                            <input type="text" id="JavaServers_checkFieldValue_3" placeholder="Working Hours" class="form-control" />
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <input type="checkbox" id="JavaServers_checkBox_4" />
+                                                                            <label for="JavaServers_checkBox_4">WebLogic</label>
+                                                                        </td>
+                                                                        <td>
+                                                                            <input type="text" id="JavaServers_checkFieldValue_4" placeholder="Working Hours" class="form-control" />
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <input type="checkbox" id="JavaServers_checkBox_5" />
+                                                                            <label for="JavaServers_checkBox_5">Glassfish</label>
+                                                                        </td>
+                                                                        <td>
+                                                                            <input type="text" id="JavaServers_checkFieldValue_5" placeholder="Working Hours" class="form-control" />
+                                                                        </td>
+                                                                    </tr>
+                                                                    <!--Add row execution-->
+                                                                    <tr>
+                                                                        <td colspan="2">
+                                                                            <a id="JavaServers_BtnPlus" class=" BtnPlus btn btn-default pull-left">Add Row</a>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Tab 3-->
+                <div class="tab-pane" id="tab3">
+                    <div class="row header" style="margin-top: 20px">
+                        <div class="col-md-12">
+                            <div class="col-md-12 table-responsive">
+                                <!--projects table-->
+                                <table id="table_Project" class="table table-bordered table-hover">
+                                    <!--header-->
+                                    <thead>
+                                        <tr>
+                                            <th colspan="2" style="text-align: center; background-color:cornflowerblue">PROJECTS</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <!---->
+                                        <tr style="background-color:azure">
+                                            <td>
+                                                Project Name
+                                            </td>
+                                            <td>
+                                                <input type="text" id="ProName_Textbox_1" placeholder="Project Name" class="form-control" />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2">
+                                                <table id="table_subProject" class="table table-bordered table-hover">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>
+                                                                <label id="ProDes_checkFieldName_1">Description</label>
+                                                            </td>
+                                                            <td>
+                                                                <textarea id="ProDes_checkFieldValue_1" placeholder="Description" class="form-control"></textarea>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <label id="ProDes_checkFieldName_2">Team size</label>
+                                                            </td>
+                                                            <td>
+                                                                <input type="text" id="ProDes_checkFieldValue_2" placeholder="Team size" class="form-control" />
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <label id="ProDes_checkFieldName_3">Role in a team</label>
+                                                            </td>
+                                                            <td>
+                                                                <input type="text" id="ProDes_checkFieldValue_3" placeholder="Role in a team" class="form-control" />
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <label id="ProDes_checkFieldName_4">Description of job on a project</label>
+                                                            </td>
+                                                            <td>
+                                                                <textarea id="ProDes_checkFieldValue_4" placeholder="Description of job on a project" class="form-control"></textarea>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <label id="ProDes_checkFieldName_5">Github link</label>
+                                                            </td>
+                                                            <td>
+                                                                <input type="text" id="ProDes_checkFieldValue_5" placeholder="Github link" class="form-control" />
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td colspan="2">
+                                                                <a id="ProCards_BtnPlus" class=" BtnPlus btn btn-default pull-left">Add Cards</a>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Submit Area-->
+                <div class="col-md-3">
+                    <button type="submit" class="btn btn-primary">
+                        Submit
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--JavaScript-->
+    <!--Table-->
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script type="text/javascript"
+            src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <!--DatePicker-->
+    <script src="~/Content/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+    <!--Custom-->
+    <script src="~/Content/Custom/Custom.js"></script>
+    <!---->
+</body>
+</html>

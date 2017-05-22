@@ -1,0 +1,15 @@
+﻿tbody tr {
+    cursor: move;
+}
+
+.datepicker-inline {
+    width: 100%;
+}
+
+.datepicker table {
+    width: 100%;
+}
+
+#answer {
+    display: none;
+}
